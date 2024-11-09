@@ -1,29 +1,23 @@
 import React from 'react';
 import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
-import Season from '../../screens/season';
-import UsersContactList from '../../screens/usersContactList';
-import UserContactView from '../../screens/userContactView';
+import MovieItemList from '../../screens/movieItemList';
+import MovieItemView from '../../screens/movieItemView';
 
 const Stack = createNativeStackNavigator();
 
 export const AppNavigator = () => {
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName="Season">
+      <Stack.Navigator initialRouteName="MovieItemList">
         <Stack.Screen
-          name="Season"
-          component={Season}
+          name="MovieItemList"
+          component={MovieItemList}
           options={{headerShown: false}}
         />
         <Stack.Screen
-          name="UsersContactList"
-          component={UsersContactList}
-          options={{headerShown: false}}
-        />
-        <Stack.Screen
-          name="UserContactView"
-          component={UserContactView}
+          name="MovieItemView"
+          component={MovieItemView}
           options={{headerShown: false}}
         />
       </Stack.Navigator>
