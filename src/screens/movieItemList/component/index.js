@@ -23,23 +23,19 @@ export const MovieItemComponent = ({movie, isHorizontal, isGridView}) => {
         <View
           style={[
             styles.card,
-            {width: isGridView === false ? width(88) : width(41)},
+            {width: isGridView === false ? width(89) : width(41)},
             {height: isGridView === false ? height(35) : height(33)},
           ]}>
           {isGridView === false ? (
             <Image
               source={{uri: movie.artworkUrl100}}
-              style={{
-                width: width(80),
-                height: height(20),
-                borderRadius: totalSize(1.2),
-              }}
+              style={styles.listImages}
               defaultSource={require('./../../../assets/images/mainImage.png')}
             />
           ) : (
             <Image
               source={{uri: movie.artworkUrl100}}
-              style={styles.image}
+              style={styles.gridImages}
               defaultSource={require('./../../../assets/images/mainImage.png')}
             />
           )}
@@ -84,6 +80,7 @@ const styles = StyleSheet.create({
   cardTitle: {
     fontFamily: fontFamily.appTextSemiBold,
     fontSize: totalSize(1.5),
+    color:'#312F37'
   },
   favoriteIcon: {
     position: 'absolute',
@@ -93,6 +90,7 @@ const styles = StyleSheet.create({
   cardText: {
     fontFamily: fontFamily.appTextRegular,
     fontSize: totalSize(1.5),
+    color:'#605D66'
   },
   price: {
     fontFamily: fontFamily.appTextBold,
@@ -104,9 +102,14 @@ const styles = StyleSheet.create({
     height: 70,
     borderRadius: totalSize(10),
   },
-  image:{
+  gridImages:{
     width: width(32),
     height: 100,
+    borderRadius: totalSize(1.2),
+  },
+  listImages:{
+    width: width(80),
+    height: height(20),
     borderRadius: totalSize(1.2),
   }
 });

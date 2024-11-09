@@ -83,6 +83,7 @@ const styles = StyleSheet.create({
     paddingLeft: width(3),
     paddingRight: width(3),
     fontFamily: fontFamily.appTextRegular,
+    color:"#777"
   },
   loadingText: {
     marginTop: height(2),

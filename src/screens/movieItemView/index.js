@@ -71,6 +71,7 @@ const styles = StyleSheet.create({
   cardTitle: {
     fontFamily: fontFamily.appTextSemiBold,
     fontSize: totalSize(1.5),
+    color:'#312F37'
   },
   favoriteIcon: {
     position: 'absolute',
@@ -80,6 +81,7 @@ const styles = StyleSheet.create({
   cardText: {
     fontFamily: fontFamily.appTextRegular,
     fontSize: totalSize(1.5),
+    color:'#605D66'
   },
   price: {
     fontFamily: fontFamily.appTextBold,
